@@ -24,17 +24,17 @@
   <script>
   var viewer = new Cesium.Viewer('cesiumContainer');
 
-var layers = viewer.scene.imageryLayers;
-var osaka = layers.addImageryProvider(new Cesium.WebMapServiceImageryProvider({
-    url : '//52.193.94.69:8080/geoserver/deco_osaka/wms',
-    layers : 'deco_osaka:SchoolData',
-    parameters : {
-      service: 'WMS',
-      transparent: 'true',
-      format : 'image/png'
-    },
-    proxy : new Cesium.DefaultProxy('/proxy/')
-}));
+  var layers = viewer.scene.imageryLayers;
+  var osaka = layers.addImageryProvider(new Cesium.WebMapServiceImageryProvider({
+      url : 'http://52.193.94.69:8080/geoserver/deco_osaka/wms',
+      layers : 'deco_osaka:SchoolData',
+      parameters : {
+        service: 'WMS',
+        transparent: 'true',
+        format : 'image/png'
+      },
+      proxy : new Cesium.DefaultProxy('/proxy/')
+  }));
 
   </script>
 </body>
