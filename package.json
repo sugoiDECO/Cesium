@@ -5,9 +5,7 @@
   "main": "server.js",
   "dependencies": {},
   "devDependencies": {
-		"express": "4.13.4",
-		"request": "2.69.0",
-		"yargs": "3.32.0"
+		"cesium": ""
 	},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
