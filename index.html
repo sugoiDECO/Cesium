@@ -399,7 +399,7 @@ function fadeInOut(layer,param) {
 var provider = new Cesium.WebMapServiceImageryProvider({
     url: '//52.193.94.69:8080/geoserver/deco_osaka/wms',
     layers : 'deco_osaka:SchoolData',
-    //proxy: new Cesium.DefaultProxy('/proxy/')
+    proxy: new Cesium.DefaultProxy('/proxy/')
 });
 
 viewer.imageryLayers.addImageryProvider(provider);
