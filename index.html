@@ -19,7 +19,7 @@
 <body>
   <div id="cesiumContainer"></div>
   <div class="checkbox">
-    
+
   </div>
   <script>
   var viewer = new Cesium.Viewer('cesiumContainer');
@@ -32,8 +32,8 @@ var osaka = layers.addImageryProvider(new Cesium.WebMapServiceImageryProvider({
       service: 'WMS',
       transparent: 'true',
       format : 'image/png'
-    },
-    proxy : new Cesium.DefaultProxy('/proxy/')
+    }
+    //proxy : new Cesium.DefaultProxy('/proxy/')
 }));
 
   </script>
