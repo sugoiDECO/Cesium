@@ -395,12 +395,16 @@ function fadeInOut(layer,param) {
 	}
 }
 
-//WMSの追加
-var provider = new Cesium.WebMapServiceImageryProvider({
-    url: '//52.193.94.69:8080/geoserver/deco_osaka/wms',
-    layers : 'deco_osaka:SchoolData',
-    proxy: new Cesium.DefaultProxy('/proxy/')
+
+var viewer = new Cesium.Viewer('cesiumContainer', {
+    imageryProvider : new Cesium.WebMapServiceImageryProvider({
+        url : '//52.193.94.69:8080/geoserver/deco_osaka/wms'
+    }),
+		layers : 'deco_osaka:SchoolData',
+    baseLayerPicker : false
 });
+
+var layers = viewer.scene.imageryLayers;
 
 viewer.imageryLayers.addImageryProvider(provider);
 
